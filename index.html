@@ -6,8 +6,8 @@
   <title>Formulario Educativo Completo</title>
   <style>
     body {
-      font-family:'Times New Roman', Times, serif;
-      background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-the-courtyards-of-a-university-campus-are-surrounded-by-many-trees-picture-image_2658011.jpg');
+      font-family: 'Times New Roman', Times, serif;
+      background-image: url('https://images.unsplash.com/photo-1514494397793-e8cc10e7d5db'); /* Cambié la imagen a Unsplash */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -24,7 +24,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .container h1 {
-      font-size: 40px;;
+      font-size: 40px;
       color: rgb(185, 118, 79);
       margin-bottom: 10px;
       text-align: center;
@@ -203,12 +203,10 @@
 
       if (foto) {
         const reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
           document.getElementById('resultadosfoto').src = e.target.result;
         };
         reader.readAsDataURL(foto);
-      } else {
-        document.getElementById('resultadosfoto').src = "https://png.pngtree.com/background/20230519/original/pngtree-the-courtyards-of-a-university-campus-are-surrounded-by-many-trees-picture-image_2658011.jpg";
       }
 
       correctoMessage.textContent = "¡Registro exitoso!";
